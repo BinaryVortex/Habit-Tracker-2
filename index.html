@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Legendary Habit Tracker</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="tracker-container">
+    <h1 class="title">Legendary Habit Tracker</h1>
+    <div class="habit-form">
+      <input type="text" id="habitInput" class="input-field" placeholder="Enter new habit">
+      <button id="addHabitBtn" class="add-habit-btn">Add Habit</button>
+    </div>
+    
+    <div class="stats-container">
+      <div>Total Habits: <span id="totalHabits">0</span></div>
+      <div>Completed: <span id="completedHabits">0</span></div>
+      <div>Completion Rate: <span id="completionRate">0%</span></div>
+    </div>
+
+    <ul id="habitList" class="habit-list"></ul>
+
+    <div class="habit-options">
+      <input type="checkbox" id="filterCompleted"> Show Completed Habits
+      <button id="clearCompleted" class="clear-btn">Clear Completed Habits</button>
+      <button id="exportBtn" class="export-btn">Export Habits</button>
+      <input type="file" id="importInput" accept=".json" class="import-input">
+    </div>
+
+    <!-- Loading Spinner -->
+    <div class="spinner hidden" id="loadingSpinner"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,158 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background: url('Habit.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.tracker-container {
+    background-color: rgba(0, 0, 0, 0.85);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+    padding: 30px;
+    max-width: 400px;
+    width: 100%;
+    transition: all 0.3s ease-in-out;
+    transform: scale(1);
+}
+
+.tracker-container:hover {
+    transform: scale(1.05);
+}
+
+.title {
+    font-size: 2.8rem;
+    background: linear-gradient(90deg, #ff8c00, #ffdd00);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+    margin-bottom: 25px;
+    text-shadow: 0 3px 5px rgba(0, 0, 0, 0.4);
+}
+
+.habit-form {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.input-field {
+    flex: 1;
+    padding: 10px;
+    border: 2px solid #ff8c00;
+    border-radius: 5px;
+    margin-right: 10px;
+    font-size: 1rem;
+    background-color: #fff;
+    color: #000;
+}
+
+.add-habit-btn {
+    background-color: #ff8c00;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1rem;
+    color: #fff;
+    transition: background-color 0.3s ease;
+}
+
+.add-habit-btn:hover {
+    background-color: #ffdd00;
+}
+
+.stats-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.habit-list {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 20px;
+    max-height: 150px; /* Set max height for scrolling */
+    overflow-y: auto; /* Enable vertical scroll if more than 1 habit */
+    scrollbar-width: thin;
+    scrollbar-color: #ff8c00 transparent;
+}
+
+.habit-list::-webkit-scrollbar {
+    width: 6px;
+}
+
+.habit-list::-webkit-scrollbar-thumb {
+    background-color: #ff8c00;
+    border-radius: 5px;
+}
+
+.habit-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 1px solid #ff8c00;
+}
+
+.habit-name {
+    flex: 1;
+}
+
+.completed {
+    text-decoration: line-through;
+    color: #00ff00;
+}
+
+.habit-actions {
+    display: flex;
+    gap: 5px;
+}
+
+.edit-btn,
+.delete-btn {
+    background-color: #ff8c00;
+    border: none;
+    padding: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 0.8rem;
+    color: #fff;
+}
+
+.edit-btn:hover,
+.delete-btn:hover {
+    background-color: #ffdd00;
+}
+
+.habit-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.clear-btn, 
+.export-btn {
+    background-color: #ff8c00;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1rem;
+    color: #fff;
+    margin-left: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.clear-btn:hover, 
+.export-btn:hover {
+    background-color: #ffdd00;
+}
+
+.import-input {
+    display: none;
+}
